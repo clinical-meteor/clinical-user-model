@@ -1,8 +1,8 @@
 Package.describe({
-    name: "socialize:user-model",
+    name: "clinical:user-model",
     summary: "A social user package",
     version: "0.1.4",
-    git: "https://github.com/copleykj/socialize-user-model.git"
+    git: "https://github.com/awatson1978/clinical-user-model.git"
 });
 
 Package.onUse(function(api) {
