@@ -10,7 +10,8 @@ Package.onUse(function(api) {
 
     api.use([
         "socialize:base-model@0.2.3",
-        "accounts-base"
+        "accounts-base",
+        "clinical:collaborations"
     ]);
 
     api.imply(["socialize:base-model", "accounts-base"]);
