@@ -11,7 +11,7 @@ Package.onUse(function (api) {
   api.use([
         "socialize:base-model@0.2.3",
         "accounts-base",
-        "clinical:collaborations"
+        "clinical:collaborations@1.1.0"
     ]);
 
   api.imply(["socialize:base-model", "accounts-base"]);
