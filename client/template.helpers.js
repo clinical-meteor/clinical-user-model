@@ -10,5 +10,9 @@
  * ```
  */
  Template.registerHelper("fullName", function (argument){
-  return Meteor.user().fullName();
+   if (Meteor.user()) {
+     return Meteor.user().fullName();
+   } else {
+     return "Log In";
+   }
 });
