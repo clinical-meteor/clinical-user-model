@@ -1,7 +1,7 @@
 Package.describe({
   name: "clinical:user-model",
   summary: "A social user package",
-  version: "1.2.5",
+  version: "1.3.0",
   git: "https://github.com/clinical-meteor/clinical-user-model.git"
 });
 
@@ -16,6 +16,7 @@ Package.onUse(function (api) {
 
   api.imply(["clinical:base-model", "accounts-base"]);
 
+  api.addFiles("client/template.helpers.js", 'client');
   api.addFiles("lib/user-model.js");
 
   api.export("User");
