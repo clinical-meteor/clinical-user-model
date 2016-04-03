@@ -67,4 +67,5 @@ describe('clinical:user-model', function () {
       expect(username).to.equal('Gregory');
     });
   });
+
 });
