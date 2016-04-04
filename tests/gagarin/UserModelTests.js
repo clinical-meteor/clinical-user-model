@@ -53,7 +53,6 @@ describe('clinical:user-model', function () {
       return Meteor.users.findOne({username: "house"}).givenName();
     }).then(function (username){
       expect(username).to.equal('Gregory');
-      Meteor.users.remove({});
     });
   });
 
