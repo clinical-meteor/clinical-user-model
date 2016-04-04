@@ -3,7 +3,6 @@ describe('clinical:user-model', function () {
   var server = meteor();
   var client = browser(server);
 
-
   it('User should exist on the client', function () {
     return client.execute(function () {
       expect(User).to.exist;
@@ -18,7 +17,7 @@ describe('clinical:user-model', function () {
   it('Confirm users are initialized', function () {
     return server.wait(1000, "until users are loaded", function () {
       Meteor.users.remove({});
-      Accounts.createUser({
+      Meteor.users.insert({
         username: 'house',
         password: 'house',
         email: 'house@test.org',
