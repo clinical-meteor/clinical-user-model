@@ -33,51 +33,43 @@ The pattern for social apps involves two publications.  One for yourself, and on
 ````js
 // Publish a person's own user profile to themselves
 Meteor.publish('userProfile', function (userId) {
-  try{
-    return Meteor.users.find({_id: this.userId}, {fields: {
-      '_id': true,
-      'username': true,
-      'profile': true,
-      'profile.name': true,
-      'profile.avatar': true,
-      'profile.username': true,
+  return Meteor.users.find({_id: this.userId}, {fields: {
+    '_id': true,
+    'username': true,
+    'profile': true,
+    'profile.name': true,
+    'profile.avatar': true,
+    'profile.username': true,
 
-      'profile.favoriteColor': true,
-      'profile.selectedTheme': true,
+    'profile.favoriteColor': true,
+    'profile.selectedTheme': true,
 
-      'profile.address': true,
-      'profile.city': true,
-      'profile.state': true,
-      'profile.zip': true,
-      
-      'emails': true,
-      'emails[0].address': true,
-      'emails.address': true
-    }});
+    'profile.address': true,
+    'profile.city': true,
+    'profile.state': true,
+    'profile.zip': true,
 
-  }catch(error){
-    console.log(error);
-  }
+    'emails': true,
+    'emails[0].address': true,
+    'emails.address': true
+  }});
+
 });
 
 // Publish the user directory which everbody can see
 Meteor.publish("usersDirectory", function () {
-  try{
-    return Meteor.users.find({}, {fields: {
-      '_id': true,
-      'username': true,
-      'profile': true,
-      'profile.name': true,
-      'profile.avatar': true,
-      'profile.username': true,
-      
-      'emails': true,
-      'emails[0].address': true,
-      'emails.address': true
-    }});
-  }catch(error){
-    console.log(error);
-  }
+  return Meteor.users.find({}, {fields: {
+    '_id': true,
+    'username': true,
+    'profile': true,
+    'profile.name': true,
+    'profile.avatar': true,
+    'profile.username': true,
+
+    'emails': true,
+    'emails[0].address': true,
+    'emails.address': true
+  }});
 });
 ````
 Note that the profile details, such as address and theme preferences will only be visible to an individual user, and won't be visible to people browsing the user directory.  
