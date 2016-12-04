@@ -14,7 +14,7 @@ Package.onUse(function (api) {
 
   api.imply([
     "clinical:base-model@1.3.5",
-    "accounts-base"
+    "accounts-base@1.2.14"
   ]);
 
   api.addFiles("lib/user-model.js");
