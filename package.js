@@ -1,7 +1,7 @@
 Package.describe({
   name: "clinical:user-model",
   summary: "A social user package",
-  version: "1.6.1",
+  version: "1.6.2",
   git: "https://github.com/clinical-meteor/user-model.git"
 });
 
