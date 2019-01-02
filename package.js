@@ -1,7 +1,7 @@
 Package.describe({
   name: "clinical:user-model",
   summary: "A social user package",
-  version: "1.6.3",
+  version: "1.6.5",
   git: "https://github.com/clinical-meteor/user-model.git"
 });
 
@@ -25,5 +25,6 @@ Package.onUse(function (api) {
 
 
 Npm.depends({
+  "lodash": "4.17.4",  
   "simpl-schema": "1.5.3"
 });
